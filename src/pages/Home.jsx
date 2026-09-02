@@ -26,11 +26,11 @@ function Home() {
 
     <div className="absolute inset-0 flex flex-col items-left max-w-7xl mx-auto py-40 px-4">
       <h1 className="text-soft tracking-widest mb-2 md:mb-2 px-6 md:px-0">Elcetic Fashion Design & Tailoring Services</h1>
-        <h1 className="tracking-widest px-6 md:px-0 md:py-4 md:p-0 text-3xl md:text-7xl text-white italic">
+        <h1 className="tracking-widest px-6 md:px-0 md:py-4 md:p-0 text-4xl md:text-7xl text-white italic">
             Crafted With Vision. <br/>
-            <span className="text-venma-gold mt-4 text-3xl md:text-7xl text-gold italic">Designed For You.</span>
+            <span className="text-venma-gold mt-4 text-4xl md:text-7xl text-gold italic">Designed For You.</span>
         </h1>
-        <p className="text-white text-[12px] italic font-medium-bold px-6 md:px-0 py-4 md:py-0 max-w-3xl leading-[2]">
+        <p className="text-white text-sm italic font-medium-bold px-6 md:px-0 py-4 md:py-0 max-w-3xl leading-[2]">
        At ECLECTIC, we create timeless pieces tailored to your style and personality. <br className="hidden md:block"/> 
        Exceptional craftsmanship, refined details, and a fit made just for you.
         </p>
