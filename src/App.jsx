@@ -8,11 +8,11 @@ import Work from './pages/Work'
 
 // import Contact from './pages/Contact'
 
-import AdminLayout from "./admin/AdminLayout";
-import Dashboard from "./admin/Dashboard";
+// import AdminLayout from "./admin/AdminLayout";
+// import Dashboard from "./admin/Dashboard";
 
-import AdminDesigns from "./admin/AdminDesigns";
-import AddDesign from "./admin/AddDesign";
+// import AdminDesigns from "./admin/AdminDesigns";
+// import AddDesign from "./admin/AddDesign";
 import RequestBooking from './pages/RequstBooking';
 
 // firebase 
@@ -40,7 +40,7 @@ function App() {
       <Route path="/contact" element={<Contact />} /> */}
 
     
-      {/* Admin */}
+      {/* Admin
       <Route path="/admin" element={<AdminLayout />}>
 
         <Route index element={<Dashboard />} />
@@ -52,9 +52,9 @@ function App() {
   <Route
     path="add-design"
     element={<AddDesign />}
-  />
+  /> */}
 
-</Route>
+{/* </Route> */}
 
 </Routes>
     
