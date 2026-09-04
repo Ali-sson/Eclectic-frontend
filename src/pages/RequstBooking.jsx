@@ -83,7 +83,7 @@ const RequestBooking = () => {
   //   alert("Your design request has been submitted successfully!");
   // };
 
- const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   console.log("========== SUBMIT BUTTON CLICKED ==========");
@@ -100,6 +100,7 @@ const RequestBooking = () => {
     data.append("preferredDate", formData.preferredDate);
     data.append("description", formData.description);
 
+    // Measurements
     data.append("unit", formData.unit);
     data.append("height", formData.height);
     data.append("bust", formData.bust);
@@ -111,23 +112,25 @@ const RequestBooking = () => {
     data.append("outfitLength", formData.outfitLength);
     data.append("trouserLength", formData.trouserLength);
 
+    // Selected design
     if (selectedDesign) {
       data.append("selectedDesign", selectedDesign.title);
     }
 
+    // Uploaded file
     if (designFile) {
       data.append("designFile", designFile);
     }
 
     console.log("Sending request to backend...");
 
-   const response = await fetch(
-  "https://eclectic-backend-grki.onrender.com/api/request-booking",
-  {
-    method: "POST",
-    body: formData,
-  }
-);
+    const response = await fetch(
+      "https://eclectic-backend-grki.onrender.com/api/request-booking",
+      {
+        method: "POST",
+        body: data,
+      }
+    );
 
     console.log("Backend response status:", response.status);
 
@@ -136,7 +139,9 @@ const RequestBooking = () => {
     console.log("Backend response:", result);
 
     if (!response.ok) {
-      throw new Error(result.message || "Something went wrong.");
+      throw new Error(
+        result.message || "Something went wrong while submitting your request."
+      );
     }
 
     alert(result.message);
@@ -151,6 +156,7 @@ const RequestBooking = () => {
     );
   }
 };
+
 
   return (
 
