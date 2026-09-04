@@ -121,13 +121,13 @@ const RequestBooking = () => {
 
     console.log("Sending request to backend...");
 
-    const response = await fetch(
-      "https://eclectic-backend.onrender.com/api/request-booking",
-      {
-        method: "POST",
-        body: data,
-      }
-    );
+   const response = await fetch(
+  "https://eclectic-backend-grki.onrender.com/api/request-booking",
+  {
+    method: "POST",
+    body: formData,
+  }
+);
 
     console.log("Backend response status:", response.status);
 
